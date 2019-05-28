@@ -5,7 +5,9 @@ class App extends React.Component {
     super(props);
     this.state = {
       time: new Date(),
-      even: true
+      evenMin: true,
+      oddSec: true,
+      evenHour: true
     };
   }
 
@@ -24,24 +26,48 @@ class App extends React.Component {
   }
 
   render() {
+    let hours = this.state.time.getHours();
     let minutes = this.state.time.getMinutes();
+    let seconds = this.state.time.getSeconds();
 
-    if (minutes % 2 === 0) {
-      this.state.even = true;
+    if (hours % 2 === 0) {
+      this.state.evenHour = true;
     } else {
-      this.state.even = false;
+      this.state.evenHour = false;
     }
 
-    return (
-      <div className="parent">
-        Digital Clock
-        <div className="clock">
-          <span className={this.state.even ? "timeEven" : "time"}>
-            {this.state.time.toLocaleTimeString()}
-          </span>
+    if (minutes % 2 === 0) {
+      this.state.evenMin = true;
+    } else {
+      this.state.evenMin = false;
+    }
+
+    if (seconds % 2 !== 0) {
+      this.state.oddSec = true;
+    } else {
+      this.state.oddSec = false;
+    }
+
+    if (seconds)
+      return (
+        <div className="parent">
+          Digital Clock
+          <div className="clock">
+            {/* <span className={this.state.evenMin ? "timeEvenMin" : "time"}>
+              {this.state.time.toLocaleTimeString()}
+            </span> */}
+            <span className={this.state.evenHour ? "timeEvenHour" : "time"}>
+              {hours}:
+              <span className={this.state.evenMin ? "timeEvenMin" : "time"}>
+                {minutes}:
+              </span>
+              <span className={this.state.oddSec ? "timeOddSec" : "time"}>
+                {seconds}
+              </span>
+            </span>
+          </div>
         </div>
-      </div>
-    );
+      );
   }
 }
 

@@ -13,9 +13,19 @@ body {
   color: greenyellow;
 }
 
-.timeEven {
+.timeEvenMin {
   font-size: 100px;
   color: red;
+}
+
+.timeOddSec {
+  font-size: 100px;
+  color: blue;
+}
+
+.timeEvenHour {
+  font-size: 100px;
+  color: white;
 }
 
 .clock {
