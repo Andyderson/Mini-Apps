@@ -13,6 +13,11 @@ body {
   color: greenyellow;
 }
 
+.timeEven {
+  font-size: 100px;
+  color: red;
+}
+
 .clock {
   background-color: black;
   text-align: center;
