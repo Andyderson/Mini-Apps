@@ -1,0 +1,41 @@
+body {
+  font-family: 'Helvetica Neue', sans-serif;
+}
+
+.parent {
+  text-align: center;
+  font-size: 50px;
+  margin: 1%;
+}
+
+.time {
+  font-size: 100px;
+  color: greenyellow;
+}
+
+.clock {
+  background-color: black;
+  text-align: center;
+  margin-top: 1%;
+  margin-left: 25%;
+  margin-right: 25%;
+  padding-left: 5%;
+  padding-right: 5%;
+  padding-top: 2%;
+  padding-bottom: 2%;
+}
+
+@media (max-width: 1000px) {
+  .parent {
+    font-size: 20px;
+  }
+  .clock {
+    min-width: 10%;
+    max-width: 10%;
+  }
+  .time {
+    min-width: 0;
+    max-width: 0;
+    font-size: 15px;
+  }
+}
