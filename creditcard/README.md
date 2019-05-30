@@ -13,9 +13,11 @@ npm 5.6.0+
 
 ### Installation
 
-* git clone
-* npm install
-* npm start | npm run build
+```
+git clone
+npm install
+npm start | npm run build
+```
 
 ### Run tests
 
