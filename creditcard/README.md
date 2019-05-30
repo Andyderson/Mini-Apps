@@ -48,4 +48,4 @@ npm run lint:fix
 * Notification alerting for improper or empty values in field
 * Modal or notification confirming proper submission
 * Shipping and Billing Address verification
-* Promotion code / coupon input field
+* Promotion code | coupon input field
